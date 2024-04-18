@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: camunda-demo
+  jersey:
+    application-path: /engine-rest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/camunda_demo?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useOldAliasMetadataBehavior=true
+    username: root
+    password: root
+camunda.bpm:
+  generic-properties:
+    properties:
+      enforceHistoryTimeToLive: false
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+  filter:
+    create: All tasks
+  database:
+    type: mysql
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
